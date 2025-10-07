@@ -92,8 +92,12 @@ function Header({ clname = "", handleMobile }) {
                 {/* Mobile nav toggle */}
                 {isMobile && (
                   <div className="nav-filter" onClick={handleMobile}>
-                    <div className="nav-mobile">
-                      <span></span>
+                    <div className="mobile-menu-btn">
+                      <div className="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -102,6 +106,50 @@ function Header({ clname = "", handleMobile }) {
           </div>
         </div>
       </div>
+
+      {/* Inline styles as fallback */}
+      <style jsx>{`
+        .mobile-menu-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          padding: 5px;
+          margin-left: 15px;
+        }
+
+        .hamburger-icon {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 20px;
+          height: 14px;
+          position: relative;
+        }
+
+        .hamburger-icon span {
+          display: block;
+          height: 2px;
+          width: 100%;
+          background-color: #ffffff;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+        }
+
+        /* When header is fixed, change color */
+        .is-fixed .hamburger-icon span {
+          background-color: #000000;
+        }
+
+        /* Ensure nav-filter is visible */
+        .nav-filter {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+      `}</style>
     </header>
   );
 }
