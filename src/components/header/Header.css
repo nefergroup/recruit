@@ -1,0 +1,439 @@
+/* Mobile Menu Popup Styles */
+.menu-mobile-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+}
+
+.menu-mobile-popup.modal-menu--open {
+  display: block;
+}
+
+.modal-menu__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.widget-filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.menu-mobile-popup.modal-menu--open .widget-filter {
+  transform: translateX(0);
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.mobile-header .logo img {
+  width: 100px !important;
+}
+
+.title-button-group {
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.mobile-menu-simple .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.mobile-menu-simple .menu-item {
+  margin-bottom: 10px;
+}
+
+.mobile-menu-simple .menu-item a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 0;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-simple .menu-item a:hover,
+.mobile-menu-simple .menu-item a.active {
+  color: #22c55e;
+}
+
+/* Upload Resume Button in Mobile Menu */
+.mobile-menu-simple .header-customize-item.button {
+  margin-top: 20px;
+}
+
+.mobile-menu-simple .header-customize-item.button a {
+  background: transparent !important;
+  color: #22c55e !important;
+  padding: 10px 20px !important;
+  border: 2px solid #22c55e !important;
+  border-radius: 5px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.mobile-menu-simple .header-customize-item.button a:hover {
+  background: #22c55e !important;
+  color: white !important;
+}
+
+/* Remove thin white line behind logo and navlinks */
+.header,
+.header * {
+    background: transparent !important;
+}
+
+.header.is-fixed.is-small {
+    background: white !important;
+}
+
+/* Specifically target any pseudo-elements that might be creating lines */
+.header:before,
+.header:after,
+.header-ct-left:before,
+.header-ct-left:after,
+.header-ct-right:before,
+.header-ct-right:after,
+.sticky-area-wrap:before,
+.sticky-area-wrap:after,
+.logo:before,
+.logo:after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+}
+
+/* Ensure no borders on any header elements */
+.header,
+.header-ct-left,
+.header-ct-right,
+.sticky-area-wrap,
+.logo,
+.nav-wrap,
+.main-nav,
+.menu,
+.menu-item {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Move navigation links slightly left */
+.nav-wrap {
+    margin-right: 0 !important;
+    margin-left: -25px !important;
+}
+
+.main-nav .menu {
+    gap: 25px !important;
+}
+
+.main-nav .menu .menu-item a {
+    padding: 0 8px !important;
+}
+
+/* ========== FIX NAVBAR HEIGHT AND POSITIONING ========== */
+
+/* Default Header State - Normal Height */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px !important; /* Reduced height to remove white space */
+  background: transparent;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Scrolled State - INCREASED HEIGHT */
+.header.is-fixed.is-small {
+  height: 90px !important; /* Reduced height when scrolled */
+  background: white !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Make logo smaller */
+.logo img {
+  width: 100px !important; /* Smaller logo */
+  height: auto !important;
+  transition: all 0.3s ease;
+}
+
+/* Logo when scrolled - keep same size or slightly smaller */
+.header.is-fixed.is-small .logo img {
+  width: 90px !important; /* Slightly smaller when scrolled */
+}
+
+/* Center align logo and navlinks vertically */
+.sticky-area-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* Adjust vertical alignment for header sections */
+.header-ct-left,
+.header-ct-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Navigation container */
+.nav-wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 0 !important;
+  margin-left: -25px !important;
+}
+
+/* Navigation menu */
+.main-nav .menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 25px !important;
+}
+
+/* Navigation items */
+.main-nav .menu .menu-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation links - adjust vertical positioning */
+.main-nav .menu .menu-item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0 8px !important;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Navigation links when scrolled */
+.header.is-fixed.is-small .main-nav .menu .menu-item a {
+  color: #333 !important;
+}
+
+/* Upload Resume Button */
+.header-customize-item.button {
+  margin-left: 20px;
+}
+
+.header-customize-item.button a {
+  background: transparent;
+  color: #fff;
+  padding: 10px 22px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Upload Resume Button when scrolled */
+.header.is-fixed.is-small .header-customize-item.button a {
+  background: transparent;
+  color: #22c55e;
+  border: 2px solid #22c55e;
+  padding: 10px 22px;
+}
+
+/* Hamburger Menu Styles */
+.nav-filter {
+  display: none; /* Hidden on desktop by default */
+  align-items: center;
+  margin-left: 15px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.nav-mobile span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  margin: 2px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-mobile span:nth-child(1) {
+  width: 20px;
+}
+
+.nav-mobile span:nth-child(2) {
+  width: 16px;
+}
+
+.nav-mobile span:nth-child(3) {
+  width: 12px;
+}
+
+.nav-filter:hover .nav-mobile span {
+  width: 20px;
+}
+
+/* Hamburger color when scrolled */
+.header.is-fixed.is-small .nav-mobile span {
+  background: #333 !important;
+}
+
+/* Body padding to account for fixed header - REDUCED */
+body {
+  padding-top: 70px; /* Reduced to match navbar height */
+}
+
+.header.is-fixed.is-small ~ * {
+  margin-top: 90px; /* Reduced to match scrolled navbar height */
+}
+
+/* ========== MOBILE RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+  .header {
+    height: 60px !important;
+    background: white !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  body {
+    padding-top: 60px;
+  }
+  
+  .header.is-fixed.is-small {
+    height: 80px !important; /* Increased height when scrolling */
+  }
+  
+  .header.is-fixed.is-small ~ * {
+    margin-top: 80px;
+  }
+  
+  .logo img {
+    width: 90px !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .header.is-fixed.is-small .logo img {
+    width: 90px !important;
+    transform: translateY(10px) !important; /* Move logo down when scrolling */
+  }
+  
+  /* Hide desktop navigation on mobile */
+  .nav-wrap {
+    display: none !important;
+  }
+  
+  /* Hide upload resume button in header on mobile */
+  .header-customize-item.button {
+    display: none !important;
+  }
+  
+  /* Show hamburger menu on mobile - ALWAYS VISIBLE */
+  .nav-filter {
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .header.is-fixed.is-small .nav-filter {
+    transform: translateY(10px) !important; /* Move hamburger down when scrolling */
+  }
+  
+  /* Hamburger color on mobile (always dark since background is white) */
+  .nav-mobile span {
+    background: #333 !important;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .header {
+    height: 75px !important;
+  }
+  
+  body {
+    padding-top: 55px;
+  }
+  
+  .header.is-fixed.is-small {
+    height: 125px !important; /* Increased height when scrolling */
+  }
+  
+  .header.is-fixed.is-small ~ * {
+    margin-top: 75px;
+  }
+  
+  .logo img {
+    width: 80px !important;
+  }
+  
+  .header.is-fixed.is-small .logo img {
+    width: 80px !important;
+    transform: translateY(10px) !important; /* Move logo down when scrolling */
+  }
+  
+  .header.is-fixed.is-small .nav-filter {
+    transform: translateY(10px) !important; /* Move hamburger down when scrolling */
+  }
+}
