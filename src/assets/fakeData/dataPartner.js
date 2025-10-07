@@ -1,7 +1,7 @@
-import img1 from '../images/partners/1 (4).jpeg'
-import img2 from '../images/partners/1 (1).jpeg'
-import img3 from '../images/partners/1 (2).jpeg'
-import img4 from '../images/partners/1 (3).jpeg'
+import img1 from "../assets/images/partners/1.jpeg";
+import img2 from "../assets/images/partners/2.jpeg";
+import img3 from "../assets/images/partners/3.jpeg";
+import img4 from "../assets/images/partners/4.jpeg";
 
 
 
@@ -24,7 +24,7 @@ const dataPartner = [
         img: img4
     },
    
-   
+    
 ]
 
 export default dataPartner;
