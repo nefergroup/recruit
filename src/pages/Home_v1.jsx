@@ -214,7 +214,7 @@ function Home_v1(props) {
 
       <Employer data={dataEm} className="employer-section" />
 
-      <Partner data={dataPartner} />
+      {/* <Partner data={dataPartner} /> */}
 
       <Footer />
 
