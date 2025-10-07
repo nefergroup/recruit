@@ -29,7 +29,7 @@ function Contact() {
                       </div>
                       <div className="content">
                         <h6>Call Us</h6>
-                        <p>123 456 7890</p>
+                        <p>+38 5953565592</p>
                       </div>
                     </div>
                     <div className="icon-inforr">
@@ -73,7 +73,8 @@ function Contact() {
                       </div>
                       <div className="content">
                         <h6>Address</h6>
-                        <p>4140 Parker Rd. Allentown, New Mexico 31134</p>
+                        <p>ILICA 237,
+1000 ZAGREB, CROATIA</p>
                       </div>
                     </div>
                     <ul className="list-social d-flex aln-center">
