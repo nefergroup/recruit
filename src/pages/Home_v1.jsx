@@ -65,38 +65,143 @@ function Home_v1(props) {
             </Link>
           </div>
 
-          <div className="mobile-menu-simple">
+          {/* Updated Mobile Menu Structure */}
+          <div className="mobile-menu-content">
             <nav className="main-nav mobile">
               <ul id="menu-primary-menu" className="menu">
-                <li className="menu-item">
+                <li className="menu-item current-item">
                   <Link to="/" className="iteam-menu" onClick={handleMobile}>
                     Home
                   </Link>
                 </li>
+
                 <li className="menu-item">
                   <Link to="/joblist_v1" className="iteam-menu" onClick={handleMobile}>
                     Find Jobs
                   </Link>
                 </li>
+
                 <li className="menu-item">
                   <Link to="/aboutus" className="iteam-menu" onClick={handleMobile}>
-                    About
+                    About Us
                   </Link>
                 </li>
+
                 <li className="menu-item">
                   <Link to="/contactus" className="iteam-menu" onClick={handleMobile}>
-                    Contact
+                    Contact Us
                   </Link>
                 </li>
               </ul>
             </nav>
+          </div>
 
-            <div className="header-customize-item button">
-              <Link to="/" onClick={handleMobile}>Upload Resume</Link>
+          <div className="header-customize-item button">
+            <Link to="/" onClick={handleMobile}>Upload Resume</Link>
+          </div>
+
+          {/* Mobile Footer Section */}
+          <div className="mobile-footer">
+            <div className="icon-infor d-flex aln-center">
+              <div className="icon">
+                <span className="icon-call-calling">
+                  <span className="path1"></span>
+                  <span className="path2"></span>
+                  <span className="path3"></span>
+                  <span className="path4"></span>
+                </span>
+              </div>
+              <div className="content">
+                <p>Need help? 24/7</p>
+                <h6>
+                  <Link to="tel:0123456678">001-1234-88888</Link>
+                </h6>
+              </div>
+            </div>
+            <div className="wd-social d-flex aln-center">
+              <ul className="list-social d-flex aln-center">
+                <li>
+                  <Link to="#">
+                    <i className="icon-facebook"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <i className="icon-linkedin2"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <i className="icon-twitter"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <i className="icon-pinterest"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <i className="icon-instagram1"></i>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="#">
+                    <i className="icon-youtube"></i>
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Hamburger Menu Icon CSS */}
+      <style jsx>{`
+        /* Ensure the hamburger menu icon shows as 3 bars */
+        .icon-menu:before {
+          content: "\\2630" !important; /* Unicode for hamburger icon */
+          font-size: 24px;
+        }
+        
+        /* Alternative approach using CSS bars */
+        .mobile-menu-btn .icon-menu {
+          display: inline-block;
+          width: 25px;
+          height: 17px;
+          position: relative;
+        }
+        
+        .mobile-menu-btn .icon-menu:before {
+          content: '';
+          position: absolute;
+          width: 25px;
+          height: 2px;
+          background: #000;
+          top: 0;
+          left: 0;
+        }
+        
+        .mobile-menu-btn .icon-menu:after {
+          content: '';
+          position: absolute;
+          width: 25px;
+          height: 2px;
+          background: #000;
+          bottom: 0;
+          left: 0;
+        }
+        
+        .mobile-menu-btn .icon-menu span {
+          position: absolute;
+          width: 25px;
+          height: 2px;
+          background: #000;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      `}</style>
 
       <Header clname="act1" handleMobile={handleMobile} />
       <Banner01 />
