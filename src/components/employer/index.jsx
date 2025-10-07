@@ -33,7 +33,8 @@ function Employer(props) {
                 <div className="employer-block">
                   <div className="inner-box">
                     <div className="logo-company">
-                      <img src={idx.img} alt={idx.title} className="w-full h-auto object-contain" />
+                     <img src={idx.img} alt={idx.title} className="w-full h-auto object-contain" />
+
                     </div>
                     <div className="box-content">
                       <h3>
