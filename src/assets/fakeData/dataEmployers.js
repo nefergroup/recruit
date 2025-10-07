@@ -4,6 +4,7 @@ const dataEm = [
   { id: 3, img: "/images/logo-company/serbia.jpg", title: "Serbia", map: "Serbia", job: "7 job openings" },
   { id: 4, img: "/images/logo-company/germany.jpg", title: "Germany", map: "Germany", job: "3 job openings" },
   { id: 5, img: "/images/logo-company/qatar.png", title: "Qatar", map: "Qatar", job: "2 job openings" },
+
 ];
 
 export default dataEm;
