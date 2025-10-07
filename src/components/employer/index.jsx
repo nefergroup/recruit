@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 import Button from "../button";
 import { Link } from "react-router-dom";
 
-Employer.propTypes = {};
+Employer.propTypes = {
+  data: PropTypes.array.isRequired,
+  className: PropTypes.string,
+};
 
 function Employer(props) {
   const [dataBlock] = useState({
@@ -11,8 +14,7 @@ function Employer(props) {
     text: "Showing companies based on reviews and recent job openings",
   });
 
-  const { data } = props;
-  const { className } = props;
+  const { data, className } = props;
 
   return (
     <section className={className}>
@@ -31,16 +33,9 @@ function Employer(props) {
                 <div className="employer-block">
                   <div className="inner-box">
                     <div className="logo-company">
-                      <img src={idx.img} alt="Jobtex" />
+                      <img src={idx.img} alt={idx.title} className="w-full h-auto object-contain" />
                     </div>
                     <div className="box-content">
-                      {/* <div className="star">
-                        <span className="icon-star-full"></span>
-                        <span className="icon-star-full"></span>
-                        <span className="icon-star-full"></span>
-                        <span className="icon-star-full"></span>
-                        <span className="icon-star-full"></span>
-                      </div> */}
                       <h3>
                         <Link to="/employers_v1">{idx.title}</Link>
                         &nbsp;
