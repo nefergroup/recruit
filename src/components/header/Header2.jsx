@@ -77,4 +77,4 @@ function Header2({ clname = "", handleMobile }) {
   );
 }
 
-export default Header2;
+export default Header2; 
