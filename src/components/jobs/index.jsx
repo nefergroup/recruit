@@ -33,7 +33,20 @@ function Jobs(props) {
                 {/* Job Header */}
                 <div className="job-archive-header flex-grow-1">
                   <div className="inner-box">
-                    {/* Removed logo-company image */}
+                    {/* ✅ Added company logo */}
+                    <div className="logo-company mb-3">
+                      <img
+                        src={idx.img}
+                        alt={idx.title}
+                        style={{
+                          width: "80px",
+                          height: "80px",
+                          objectFit: "contain",
+                        }}
+                      />
+                    </div>
+
+                    {/* Job Content */}
                     <div className="box-content">
                       <h4>{idx.cate}</h4>
                       <h3>
@@ -76,7 +89,7 @@ function Jobs(props) {
             </div>
           ))}
 
-          {/* Optional Button (Currently Hidden) */}
+          {/* Optional Button */}
           <div className="col-md-12">
             {/* <div className="wrap-button">
               <Button2 title="See more Jobs" link="/joblist_v1" />
