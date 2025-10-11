@@ -1,16 +1,15 @@
-import React from "react";
-import Header2 from "../components/header/Header2";
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import Header from "../components/header";
 import MapSection from "../components/map";
 import dataMap from "../assets/fakeData/dataMap";
 import Footer from "../components/footer";
 import Gotop from "../components/gotop";
 import Contact from "../components/contact";
 import logo from "../assets/images/logo.png";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-// Import the same CSS file
-import "../components/header/mobile-menu.css";
+ContactUs.propTypes = {};
 
 function ContactUs(props) {
   const [isShowMobile, setShowMobile] = useState(false);
@@ -22,6 +21,14 @@ function ContactUs(props) {
       ? getMobile.classList.add("modal-menu--open")
       : getMobile.classList.remove("modal-menu--open");
   };
+
+  useEffect(() => {
+    const WOW = require("wowjs");
+    window.wow = new WOW.WOW({
+      live: false,
+    });
+    window.wow.init();
+  }, []);
 
   return (
     <>
@@ -39,7 +46,6 @@ function ContactUs(props) {
             </Link>
           </div>
 
-          {/* Simplified Mobile Menu - Same as Joblist_v1 */}
           <div className="mobile-menu-content">
             <nav className="main-nav mobile">
               <ul id="menu-primary-menu" className="menu">
@@ -48,22 +54,34 @@ function ContactUs(props) {
                     Home
                   </Link>
                 </li>
-
                 <li className="menu-item">
-                  <Link to="/joblist_v1" className="iteam-menu" onClick={handleMobile}>
-                    Find Jobs
+                  <Link to="/aboutrecruitplus" className="iteam-menu" onClick={handleMobile}>
+                    About Recruit Plus
                   </Link>
                 </li>
-
                 <li className="menu-item">
-                  <Link to="/aboutus" className="iteam-menu" onClick={handleMobile}>
-                    About Us
+                  <Link to="/specialization" className="iteam-menu" onClick={handleMobile}>
+                    Specialization
                   </Link>
                 </li>
-
+                <li className="menu-item">
+                  <Link to="/recruitmentprocess" className="iteam-menu" onClick={handleMobile}>
+                    Recruitment Process
+                  </Link>
+                </li>
+                <li className="menu-item">
+                  <Link to="/skillgrowacademy" className="iteam-menu" onClick={handleMobile}>
+                    SkillGrow Academy
+                  </Link>
+                </li>
+                <li className="menu-item">
+                  <Link to="/ourlocations" className="iteam-menu" onClick={handleMobile}>
+                    Our Locations
+                  </Link>
+                </li>
                 <li className="menu-item current-item">
                   <Link to="/contactus" className="iteam-menu" onClick={handleMobile}>
-                    Contact Us
+                    Contact
                   </Link>
                 </li>
               </ul>
@@ -87,7 +105,7 @@ function ContactUs(props) {
               <div className="content">
                 <p>Need help? 24/7</p>
                 <h6>
-                  <Link to="tel:0123456678">001-1234-88888</Link>
+                  <Link to="tel:+385953565592">+385 953565592</Link>
                 </h6>
               </div>
             </div>
@@ -110,17 +128,7 @@ function ContactUs(props) {
                 </li>
                 <li>
                   <Link to="#">
-                    <i className="icon-pinterest"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
                     <i className="icon-instagram1"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
-                    <i className="icon-youtube"></i>
                   </Link>
                 </li>
               </ul>
@@ -129,7 +137,7 @@ function ContactUs(props) {
         </div>
       </div>
       
-      <Header2 clname="actPage11" handleMobile={handleMobile} />
+      <Header clname="act1" handleMobile={handleMobile} />
       <MapSection markers={dataMap} />
       <Contact />
       <Footer />

@@ -64,12 +64,22 @@ import Shopsingle from "./pages/Shopsingle";
 import Shoppingcart from "./pages/Shoppingcart";
 import Checkout from "./pages/Checkout";
 import AboutUs from "./pages/AboutUs";
+import AboutRecruitPlus from "./pages/AboutRecruitPlus";
+import Specialization from "./pages/Specialization";
+import RecruitmentProcess from "./pages/RecruitmentProcess";
+import SkillGrowAcademy from "./pages/SkillGrowAcademy";
+import WhyChooseRecruitPlus from "./pages/WhyChooseRecruitPlus";
+import OurLocations from "./pages/OurLocations";
+import SuccessStories from "./pages/SuccessStories";
+import InternationalRecruitmentServices from "./pages/InternationalRecruitmentServices";
+import OurRecruitmentProcess from "./pages/OurRecruitmentProcess";
 import Faqs from "./pages/Faqs";
 import Termsofuse from "./pages/Termsofuse";
 import Pricing from "./pages/Pricing";
 import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import ContactUs from "./pages/ContactUs";
+import ContactInformation from "./pages/ContactInformation";
 import { useEffect } from "react";
 import ScrollToTop from "./ScrollToTop";
 import { useState } from "react";
@@ -134,12 +144,22 @@ const App = () => {
     { path: "/shoppingcart", element: <Shoppingcart /> },
     { path: "/checkout", element: <Checkout /> },
     { path: "/aboutus", element: <AboutUs /> },
+    { path: "/aboutrecruitplus", element: <AboutRecruitPlus /> },
+    { path: "/specialization", element: <Specialization /> },
+    { path: "/recruitmentprocess", element: <RecruitmentProcess /> },
+    { path: "/skillgrowacademy", element: <SkillGrowAcademy /> },
+    { path: "/whychooserecruitplus", element: <WhyChooseRecruitPlus /> },
+    { path: "/ourlocations", element: <OurLocations /> },
+    { path: "/successstories", element: <SuccessStories /> },
+    { path: "/internationalrecruitmentservices", element: <InternationalRecruitmentServices /> },
+    { path: "/ourrecruitmentprocess", element: <OurRecruitmentProcess /> },
     { path: "/faqs", element: <Faqs /> },
     { path: "/termsofuse", element: <Termsofuse /> },
     { path: "/pricing", element: <Pricing /> },
     { path: "/login", element: <Login /> },
     { path: "/createaccount", element: <CreateAccount /> },
     { path: "/contactus", element: <ContactUs /> },
+    { path: "/contactinformation", element: <ContactInformation /> },
   ]);
   return routes;
 };

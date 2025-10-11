@@ -8,13 +8,10 @@ function FormContent(props) {
   return (
     <div className="content">
       <div className="heading">
-        <h2 className="text-white">Find the Job That Fits Your Future</h2>
+        <h2 className="text-white">Where European Dreams Become Reality Through Skills, Training & Opportunity</h2>
         <p className="text-white">
-          Recruit Plus, powered by Vision 360, is your trusted gateway to
-          overseas career opportunities. Explore verified, high-demand jobs
-          across Europe and the Middle East, supported by global training,
-          certification, and complete placement assistance — all with no hidden
-          fees or subscriptions.
+          Connecting European Success with Global Talent<br/>
+          For over 12 years, Recruit Plus has been Europe's trusted partner in international recruitment, specializing in sourcing skilled professionals from India, Qatar and Nepal for thriving careers across Croatia, Latvia, Germany and Serbia. We don't just fill positions – we build bridges between ambition and opportunity.
         </p>
       </div>
 
@@ -44,6 +41,15 @@ function FormContent(props) {
           <Link to="/aboutus">Scaffolder</Link>
         </li>
       </ul>
+
+      <div className="banner-cta">
+        <Link to="/whychooserecruitplus" className="tf-button style-1 banner-button">
+          Why Choose Recruit Plus
+        </Link>
+        <Link to="/contactus" className="tf-button style-2 banner-button-secondary">
+          Get Started
+        </Link>
+      </div>
     </div>
   );
 }

@@ -82,8 +82,56 @@ function Home_v1(props) {
                 </li>
 
                 <li className="menu-item">
-                  <Link to="/aboutus" className="iteam-menu" onClick={handleMobile}>
-                    About Us
+                  <Link to="/aboutrecruitplus" className="iteam-menu" onClick={handleMobile}>
+                    About Recruit Plus
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/specialization" className="iteam-menu" onClick={handleMobile}>
+                    Specialization
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/recruitmentprocess" className="iteam-menu" onClick={handleMobile}>
+                    Recruitment Process
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/skillgrowacademy" className="iteam-menu" onClick={handleMobile}>
+                    SkillGrow Academy
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/whychooserecruitplus" className="iteam-menu" onClick={handleMobile}>
+                    Why Choose Us
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/ourlocations" className="iteam-menu" onClick={handleMobile}>
+                    Our Locations
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/successstories" className="iteam-menu" onClick={handleMobile}>
+                    Success Stories
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/internationalrecruitmentservices" className="iteam-menu" onClick={handleMobile}>
+                    International Recruitment
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/ourrecruitmentprocess" className="iteam-menu" onClick={handleMobile}>
+                    Our Process
                   </Link>
                 </li>
 
@@ -206,13 +254,13 @@ function Home_v1(props) {
       <Header clname="act1" handleMobile={handleMobile} />
       <Banner01 />
 
-      <Category data={dataCate} className="job-category-section" />
+      {/* <Category data={dataCate} className="job-category-section" />
 
       <Jobs data={dataJobs} className="jobs-section-three" />
 
       <BoxIcon />
 
-      <Employer data={dataEm} className="employer-section" />
+      <Employer data={dataEm} className="employer-section" /> */}
 
       {/* <Partner data={dataPartner} /> */}
 

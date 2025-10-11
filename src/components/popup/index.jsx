@@ -13,8 +13,8 @@ function PopUpForm() {
       <div className="modal-menu__backdrop" onClick={handleClosePopup} />
       <div className="content">
         <div className="content-left">
-          <div className="thumb">
-            <img src={img} alt="images" />
+          <div className="thumb" style={{height:"100%"}}>
+            <img src="/images/recruit/IMG-20251011-WA0012.jpg" alt="Recruit Plus Welcome" />
           </div>
         </div>
         <div className="content-right">
