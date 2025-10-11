@@ -62,16 +62,16 @@ function Footer() {
               </div>
             </div>
 
-            {/* Quick Links Column */}
+            {/* Services Column */}
             <div className="col-lg-2 col-md-6 col-6" style={{ paddingLeft: '5px', paddingRight: '5px', marginLeft: '10px' }}>
               <div className="footer-cl-2">
-                <h6 className="ft-title">Quick Links</h6>
+                <h6 className="ft-title">Our Services</h6>
                 <ul className="navigation-menu-footer">
-                  <li><Link to="find-jobs-list.html">Job Packages</Link></li>
-                  <li><Link to="find-jobs-list.html">Post New Job</Link></li>
-                  <li><Link to="find-jobs-list.html">Jobs Listing</Link></li>
-                  <li><Link to="employers-list.html">Employer Listing</Link></li>
-                  <li><Link to="employers-grid-fullwidth.html">Employers Grid</Link></li>
+                  <li><Link to="/recruitment-process">Recruitment Process</Link></li>
+                  <li><Link to="/skillgrow-academy">SkillGrow Academy</Link></li>
+                  <li><Link to="/job-placement-services">Job Placement</Link></li>
+                  <li><Link to="/international-recruitment">Industries</Link></li>
+                  <li><Link to="/our-locations">Our Locations</Link></li>
                 </ul>
               </div>
             </div>

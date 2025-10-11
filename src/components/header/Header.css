@@ -240,7 +240,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 0px !important; /* Reduced height to remove white space */
+  height: 80px !important;
   background: transparent;
   z-index: 9999;
   transition: all 0.3s ease;
@@ -251,9 +251,9 @@
   align-items: center;
 }
 
-/* Scrolled State - INCREASED HEIGHT */
+/* Scrolled State - Compact Height */
 .header.is-fixed.is-small {
-  height: 90px !important; /* Reduced height when scrolled */
+  height: 70px !important;
   background: white !important;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
@@ -408,13 +408,13 @@
   background: #333 !important;
 }
 
-/* Body padding to account for fixed header - REDUCED */
+/* Body padding to account for fixed header */
 body {
-  padding-top: 70px; /* Reduced to match navbar height */
+  padding-top: 80px; /* Match navbar height */
 }
 
 .header.is-fixed.is-small ~ * {
-  margin-top: 90px; /* Reduced to match scrolled navbar height */
+  margin-top: 70px; /* Match scrolled navbar height */
 }
 
 /* ========== MOBILE RESPONSIVENESS ========== */

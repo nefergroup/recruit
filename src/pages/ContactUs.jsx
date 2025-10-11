@@ -1,16 +1,11 @@
-import React from "react";
-import Header2 from "../components/header/Header2";
-import MapSection from "../components/map";
-import dataMap from "../assets/fakeData/dataMap";
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import Header from "../components/header";
 import Footer from "../components/footer";
 import Gotop from "../components/gotop";
-import Contact from "../components/contact";
-import logo from "../assets/images/logo.png";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import "../components/about/about_sections.scss";
 
-// Import the same CSS file
-import "../components/header/mobile-menu.css";
+ContactUs.propTypes = {};
 
 function ContactUs(props) {
   const [isShowMobile, setShowMobile] = useState(false);
@@ -23,115 +18,175 @@ function ContactUs(props) {
       : getMobile.classList.remove("modal-menu--open");
   };
 
+  useEffect(() => {
+    const WOW = require("wowjs");
+    window.wow = new WOW.WOW({
+      live: false,
+    });
+    window.wow.init();
+  }, []);
+
+  const contactInfo = [
+    {
+      id: 1,
+      title: "Headquarters",
+      location: "Croatia",
+      icon: "icon-map-pin",
+      details: [
+        "Main Operations Centre",
+        "Strategic Partnerships Management",
+        "International Recruitment Coordination"
+      ]
+    },
+    {
+      id: 2,
+      title: "Email Contact",
+      email: "info@recruitplus-eu.com",
+      icon: "icon-mail",
+      details: [
+        "General Inquiries",
+        "Career Consultations",
+        "Partnership Opportunities"
+      ]
+    },
+    {
+      id: 3,
+      title: "Phone Contact",
+      phone: "+385 953565592",
+      icon: "icon-phone",
+      details: [
+        "Croatia Headquarters",
+        "Direct Line Support",
+        "Emergency Contact"
+      ]
+    },
+    {
+      id: 4,
+      title: "Qatar Operations",
+      phone: "+974 30344183",
+      icon: "icon-globe",
+      details: [
+        "Middle East Operations",
+        "International Projects",
+        "Regional Support"
+      ]
+    },
+    {
+      id: 5,
+      title: "India Operations",
+      phone: "+91 8921737217",
+      icon: "icon-users",
+      details: [
+        "Candidate Recruitment",
+        "Training Programs",
+        "SkillGrow Academy"
+      ]
+    }
+  ];
+
   return (
     <>
-      <div className="menu-mobile-popup">
-        <div className="modal-menu__backdrop" onClick={handleMobile}></div>
-        <div className="widget-filter">
-          <div className="mobile-header">
-            <div id="logo" className="logo">
-              <Link to="/">
-                <img className="site-logo" src={logo} alt="Image" />
-              </Link>
-            </div>
-            <Link className="title-button-group" onClick={handleMobile}>
-              <i className="icon-close"></i>
-            </Link>
-          </div>
-
-          {/* Simplified Mobile Menu - Same as Joblist_v1 */}
-          <div className="mobile-menu-content">
-            <nav className="main-nav mobile">
-              <ul id="menu-primary-menu" className="menu">
-                <li className="menu-item">
-                  <Link to="/" className="iteam-menu" onClick={handleMobile}>
-                    Home
-                  </Link>
-                </li>
-
-                <li className="menu-item">
-                  <Link to="/joblist_v1" className="iteam-menu" onClick={handleMobile}>
-                    Find Jobs
-                  </Link>
-                </li>
-
-                <li className="menu-item">
-                  <Link to="/aboutus" className="iteam-menu" onClick={handleMobile}>
-                    About Us
-                  </Link>
-                </li>
-
-                <li className="menu-item current-item">
-                  <Link to="/contactus" className="iteam-menu" onClick={handleMobile}>
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div className="header-customize-item button">
-            <Link to="/" onClick={handleMobile}>Upload Resume</Link>
-          </div>
-
-          <div className="mobile-footer">
-            <div className="icon-infor d-flex aln-center">
-              <div className="icon">
-                <span className="icon-call-calling">
-                  <span className="path1"></span>
-                  <span className="path2"></span>
-                  <span className="path3"></span>
-                  <span className="path4"></span>
-                </span>
+      <Header clname="act1" handleMobile={handleMobile} />
+      
+      {/* Page Banner */}
+      <section className="page-banner-section">
+        <div className="tf-container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="page-banner-content text-center">
+                <h1>Contact Information</h1>
+                <p className="lead">Get in touch with our global team</p>
               </div>
-              <div className="content">
-                <p>Need help? 24/7</p>
-                <h6>
-                  <Link to="tel:0123456678">001-1234-88888</Link>
-                </h6>
-              </div>
-            </div>
-            <div className="wd-social d-flex aln-center">
-              <ul className="list-social d-flex aln-center">
-                <li>
-                  <Link to="#">
-                    <i className="icon-facebook"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
-                    <i className="icon-linkedin2"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
-                    <i className="icon-twitter"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
-                    <i className="icon-pinterest"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
-                    <i className="icon-instagram1"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#">
-                    <i className="icon-youtube"></i>
-                  </Link>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
-      </div>
-      
-      <Header2 clname="actPage11" handleMobile={handleMobile} />
-      <MapSection markers={dataMap} />
-      <Contact />
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="contact-info-section">
+        <div className="tf-container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="tf-title text-center">
+                <div className="group-title">
+                  <h1>Our Global Contact Network</h1>
+                  <p className="lead">Reach out to our team across different regions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row mt-5">
+            {contactInfo.map((contact) => (
+              <div key={contact.id} className="col-lg-4 col-md-6 mb-4">
+                <div className="contact-card">
+                  <div className="contact-image">
+                    <img 
+                      src={`/images/recruit/IMG-20251011-WA00${39 + contact.id}.jpg`}
+                      alt={contact.title}
+                      className="img-fluid"
+                      style={{ width: '100%', height: '160px', objectFit: 'cover', borderRadius: '20px 20px 0 0' }}
+                    />
+                  </div>
+                  <div className="contact-header">
+                    <div className="contact-icon">
+                      <span className={contact.icon}></span>
+                    </div>
+                    <h3>{contact.title}</h3>
+                  </div>
+                  <div className="contact-content">
+                    {contact.location && (
+                      <div className="contact-location">
+                        <strong>{contact.location}</strong>
+                      </div>
+                    )}
+                    {contact.email && (
+                      <div className="contact-email">
+                        <a href={`mailto:${contact.email}`}>{contact.email}</a>
+                      </div>
+                    )}
+                    {contact.phone && (
+                      <div className="contact-phone">
+                        <a href={`tel:${contact.phone}`}>{contact.phone}</a>
+                      </div>
+                    )}
+                    <div className="contact-details">
+                      <ul>
+                        {contact.details.map((detail, index) => (
+                          <li key={index}>{detail}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="cta-section">
+        <div className="tf-container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="cta-content text-center">
+                <h2>Ready to Start Your European Career Journey?</h2>
+                <p>Contact us today to learn more about our recruitment services and training programs.</p>
+                <div className="cta-buttons">
+                  <a href="mailto:info@recruitplus-eu.com" className="btn btn-primary btn-lg">
+                    Send Email
+                  </a>
+                  <a href="tel:+385953565592" className="btn btn-outline-primary btn-lg">
+                    Call Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
       <Gotop />
     </>

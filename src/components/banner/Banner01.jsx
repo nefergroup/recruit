@@ -15,6 +15,16 @@ function Banner01(props) {
                     <div className="col-lg-8 col-md-8">
                         <FormContent />
                     </div>
+                    <div className="col-lg-4 col-md-4">
+                        <div className="banner-image">
+                            <img 
+                                src="/images/recruit/IMG-20251011-WA0012.jpg" 
+                                alt="Recruit Plus Training" 
+                                className="img-fluid rounded"
+                                style={{ maxHeight: '400px', objectFit: 'cover' }}
+                            />
+                        </div>
+                    </div>
                 </div>
                 </div>
                 <div className="overlay"></div>

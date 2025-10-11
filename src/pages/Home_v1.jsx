@@ -7,6 +7,9 @@ import BoxIcon from "../components/boxicon";
 import Employer from "../components/employer";
 import Testimonials from "../components/testimonials";
 import Partner from "../components/partner";
+import AboutRecruitPlus from "../components/about/AboutRecruitPlus";
+import WhyEuropeNeedsYou from "../components/about/WhyEuropeNeedsYou";
+import SpecializationAreas from "../components/about/SpecializationAreas";
 import dataCate from "../assets/fakeData/dataCategory";
 import dataJobs from "../assets/fakeData/dataJobs";
 import dataEm from "../assets/fakeData/dataEmployers";
@@ -18,6 +21,7 @@ import Gotop from "../components/gotop";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import PopUpForm from "../components/popup";
+import "../components/about/about_sections.scss";
 
 Home_v1.propTypes = {};
 
@@ -76,14 +80,38 @@ function Home_v1(props) {
                 </li>
 
                 <li className="menu-item">
-                  <Link to="/joblist_v1" className="iteam-menu" onClick={handleMobile}>
-                    Find Jobs
+                  <Link to="/recruitment-process" className="iteam-menu" onClick={handleMobile}>
+                    Recruitment Process
                   </Link>
                 </li>
 
                 <li className="menu-item">
-                  <Link to="/aboutus" className="iteam-menu" onClick={handleMobile}>
-                    About Us
+                  <Link to="/skillgrow-academy" className="iteam-menu" onClick={handleMobile}>
+                    SkillGrow Academy
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/job-placement-services" className="iteam-menu" onClick={handleMobile}>
+                    Job Placement
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/why-choose-recruit-plus" className="iteam-menu" onClick={handleMobile}>
+                    Why Choose Us
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/our-locations" className="iteam-menu" onClick={handleMobile}>
+                    Locations
+                  </Link>
+                </li>
+
+                <li className="menu-item">
+                  <Link to="/international-recruitment" className="iteam-menu" onClick={handleMobile}>
+                    Industries
                   </Link>
                 </li>
 
@@ -206,13 +234,121 @@ function Home_v1(props) {
       <Header clname="act1" handleMobile={handleMobile} />
       <Banner01 />
 
-      <Category data={dataCate} className="job-category-section" />
+      <AboutRecruitPlus />
 
-      <Jobs data={dataJobs} className="jobs-section-three" />
+      <WhyEuropeNeedsYou />
+
+      <SpecializationAreas />
+
+      {/* More Information Section */}
+      <section className="more-info-section">
+        <div className="tf-container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="tf-title text-center">
+                <div className="group-title">
+                  <h1>Explore More</h1>
+                  <p className="lead">Discover our comprehensive services and global presence</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row mt-5">
+            <div className="col-lg-3 col-md-6 mb-4">
+              <div className="info-card">
+                <div className="info-image">
+                  <img 
+                    src="/images/recruit/IMG-20251011-WA0043.jpg"
+                    alt="Recruitment Process"
+                    className="img-fluid"
+                    style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '15px 15px 0 0' }}
+                  />
+                </div>
+                <div className="info-icon">
+                  <span className="icon-users"></span>
+                </div>
+                <div className="info-content">
+                  <h3>Recruitment Process</h3>
+                  <p>Learn about our 4-phase recruitment methodology</p>
+                  <Link to="/recruitment-process" className="info-link">Learn More</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 mb-4">
+              <div className="info-card">
+                <div className="info-image">
+                  <img 
+                    src="/images/recruit/IMG-20251011-WA0044.jpg"
+                    alt="Our Locations"
+                    className="img-fluid"
+                    style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '15px 15px 0 0' }}
+                  />
+                </div>
+                <div className="info-icon">
+                  <span className="icon-map-pin"></span>
+                </div>
+                <div className="info-content">
+                  <h3>Our Locations</h3>
+                  <p>Discover our global operations across Europe and Qatar</p>
+                  <Link to="/our-locations" className="info-link">View Locations</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 mb-4">
+              <div className="info-card">
+                <div className="info-image">
+                  <img 
+                    src="/images/recruit/IMG-20251011-WA0045.jpg"
+                    alt="Industries"
+                    className="img-fluid"
+                    style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '15px 15px 0 0' }}
+                  />
+                </div>
+                <div className="info-icon">
+                  <span className="icon-industry"></span>
+                </div>
+                <div className="info-content">
+                  <h3>Industries</h3>
+                  <p>Explore our industry specializations and opportunities</p>
+                  <Link to="/international-recruitment" className="info-link">View Industries</Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-lg-3 col-md-6 mb-4">
+              <div className="info-card">
+                <div className="info-image">
+                  <img 
+                    src="/images/recruit/IMG-20251011-WA0046.jpg"
+                    alt="Success Stories"
+                    className="img-fluid"
+                    style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '15px 15px 0 0' }}
+                  />
+                </div>
+                <div className="info-icon">
+                  <span className="icon-award"></span>
+                </div>
+                <div className="info-content">
+                  <h3>Success Stories</h3>
+                  <p>Read about our achievements and client success</p>
+                  <Link to="/why-choose-recruit-plus" className="info-link">Our Success</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <Category data={dataCate} className="job-category-section" /> */}
+
+      {/* <Jobs data={dataJobs} className="jobs-section-three" /> */}
 
       <BoxIcon />
 
-      <Employer data={dataEm} className="employer-section" />
+      {/* <Employer data={dataEm} className="employer-section" /> */}
 
       {/* <Partner data={dataPartner} /> */}
 

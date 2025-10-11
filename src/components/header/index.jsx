@@ -71,10 +71,13 @@ function Header({ clname = "", handleMobile }) {
                           <NavLink to="/">Home</NavLink>
                         </li>
                         <li className="menu-item">
-                          <NavLink to="/joblist_v1">Training</NavLink>
+                          <NavLink to="/skillgrow-academy">Training</NavLink>
                         </li>
                         <li className="menu-item">
-                          <NavLink to="/aboutus">About</NavLink>
+                          <NavLink to="/job-placement-services">Services</NavLink>
+                        </li>
+                        <li className="menu-item">
+                          <NavLink to="/why-choose-recruit-plus">About</NavLink>
                         </li>
                         <li className="menu-item">
                           <NavLink to="/contactus">Contact</NavLink>

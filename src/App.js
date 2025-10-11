@@ -70,6 +70,12 @@ import Pricing from "./pages/Pricing";
 import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import ContactUs from "./pages/ContactUs";
+import RecruitmentProcess from "./pages/RecruitmentProcess";
+import SkillGrowAcademy from "./pages/SkillGrowAcademy";
+import JobPlacementServices from "./pages/JobPlacementServices";
+import WhyChooseRecruitPlus from "./pages/WhyChooseRecruitPlus";
+import OurLocations from "./pages/OurLocations";
+import InternationalRecruitment from "./pages/InternationalRecruitment";
 import { useEffect } from "react";
 import ScrollToTop from "./ScrollToTop";
 import { useState } from "react";
@@ -140,6 +146,12 @@ const App = () => {
     { path: "/login", element: <Login /> },
     { path: "/createaccount", element: <CreateAccount /> },
     { path: "/contactus", element: <ContactUs /> },
+    { path: "/recruitment-process", element: <RecruitmentProcess /> },
+    { path: "/skillgrow-academy", element: <SkillGrowAcademy /> },
+    { path: "/job-placement-services", element: <JobPlacementServices /> },
+    { path: "/why-choose-recruit-plus", element: <WhyChooseRecruitPlus /> },
+    { path: "/our-locations", element: <OurLocations /> },
+    { path: "/international-recruitment", element: <InternationalRecruitment /> },
   ]);
   return routes;
 };
