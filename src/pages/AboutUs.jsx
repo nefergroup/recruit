@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
+// import Header2 from "../components/header/Header2";
+import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Breadcrumb from "../components/breadcrumb";
 import Review from "../components/aboutPage/Review";
@@ -139,7 +140,8 @@ function AboutUs(props) {
         </div>
       </div>
       
-      <Header2 clname="actPage5" handleMobile={handleMobile} />
+      {/* <Header2 clname="actPage5" handleMobile={handleMobile} /> */}
+      <Navbar />
       <Breadcrumb title="About Us" />
       <Review />
       <BannerCounter />
@@ -154,7 +156,7 @@ function AboutUs(props) {
                 <div className="tf-iconbox style-3 cl3 stc2">
                   <div className="box-header">
                     <div className="img1">
-                      <img src={img1} alt="img" />
+                      <img src="/images/recruit/IMG-20251011-WA0012.jpg" alt="Recruit Plus Team" />
                     </div>
                   </div>
                   <div className="box-content">
@@ -169,7 +171,7 @@ function AboutUs(props) {
                 <div className="tf-iconbox style-3 cl3 stc2">
                   <div className="box-header">
                     <div className="img1">
-                      <img src={img2} alt="img" />
+                      <img src="/images/recruit/IMG-20251011-WA0013.jpg" alt="Training and Certification" />
                     </div>
                   </div>
                   <div className="box-content">
@@ -184,7 +186,7 @@ function AboutUs(props) {
                 <div className="tf-iconbox style-3 cl3 stc2">
                   <div className="box-header">
                     <div className="img1">
-                      <img src={img3} alt="img" />
+                      <img src="/images/recruit/IMG-20251011-WA0014.jpg" alt="International Placement" />
                     </div>
                   </div>
                   <div className="box-content ">

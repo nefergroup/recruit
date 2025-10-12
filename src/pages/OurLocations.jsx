@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import Header from "../components/header";
+// import Header from "../components/header";
+import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Gotop from "../components/gotop";
 import { Link } from "react-router-dom";
@@ -172,7 +173,8 @@ function OurLocations(props) {
         </div>
       </div>
 
-      <Header clname="act1" handleMobile={handleMobile} />
+      {/* <Header clname="act1" handleMobile={handleMobile} /> */}
+      <Navbar />
 
       {/* Page Header */}
       <section className="page-header section-padding" style={{

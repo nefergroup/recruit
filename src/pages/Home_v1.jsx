@@ -12,12 +12,13 @@ import dataJobs from "../assets/fakeData/dataJobs";
 import dataEm from "../assets/fakeData/dataEmployers";
 import dataTestimonials from "../assets/fakeData/dataTestimonials";
 import dataPartner from "../assets/fakeData/dataPartner";
-import Header from "../components/header";
+// import Header from "../components/header";
 import Footer from "../components/footer";
 import Gotop from "../components/gotop";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import PopUpForm from "../components/popup";
+import Navbar from "../components/navbar";
 
 Home_v1.propTypes = {};
 
@@ -251,7 +252,8 @@ function Home_v1(props) {
         }
       `}</style>
 
-      <Header clname="act1" handleMobile={handleMobile} />
+      {/* <Header clname="act1" handleMobile={handleMobile} /> */}
+      <Navbar/>
       <Banner01 />
 
       {/* <Category data={dataCate} className="job-category-section" />

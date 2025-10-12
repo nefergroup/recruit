@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
+// import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
 import Breadcrumb from "../components/breadcrumb";
 import Gotop from "../components/gotop";
@@ -136,7 +136,7 @@ function AboutRecruitPlus(props) {
         </div>
       </div>
       
-      <Header2 clname="actPage5" handleMobile={handleMobile} />
+      {/* <Header2 clname="actPage5" handleMobile={handleMobile} /> */}
       <Breadcrumb title="About Recruit Plus" />
       
       {/* About Recruit Plus Section */}
