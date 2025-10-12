@@ -5,6 +5,7 @@ import "./Navbar.scss";
 const Navbar = ({ className = "" }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMoreDropdownOpen, setIsMoreDropdownOpen] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
@@ -26,19 +27,40 @@ const Navbar = ({ className = "" }) => {
     setIsMobileMenuOpen(false);
   };
 
+  // Handle more dropdown toggle
+  const toggleMoreDropdown = () => {
+    setIsMoreDropdownOpen(!isMoreDropdownOpen);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMoreDropdownOpen && !event.target.closest('.navbar-item-more')) {
+        setIsMoreDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isMoreDropdownOpen]);
+
   // Navigation links
   const navLinks = [
     { path: "/", label: "Home" },
+    { path: "/specialization", label: "Service" },
     { path: "/aboutus", label: "About" },
-    { path: "/specialization", label: "Services" },
-    { path: "/recruitmentprocess", label: "Process" },
+    { path: "/ourlocations", label: "Location" },
     { path: "/skillgrowacademy", label: "Training" },
+    { path: "/contactinformation", label: "Contact" },
+  ];
+
+  // Additional links for "More" dropdown
+  const moreLinks = [
+    { path: "/recruitmentprocess", label: "Process" },
     { path: "/whychooserecruitplus", label: "Why Choose Us" },
-    { path: "/ourlocations", label: "Locations" },
     { path: "/successstories", label: "Success Stories" },
     { path: "/internationalrecruitmentservices", label: "International" },
     { path: "/ourrecruitmentprocess", label: "Our Process" },
-    { path: "/contactinformation", label: "Contact" },
   ];
 
   return (
@@ -70,6 +92,38 @@ const Navbar = ({ className = "" }) => {
                   </NavLink>
                 </li>
               ))}
+              
+              {/* More Dropdown */}
+              <li className="navbar-item navbar-item-more">
+                <button 
+                  className="navbar-link navbar-link-more"
+                  onClick={toggleMoreDropdown}
+                >
+                  More
+                  <i className={`icon-arrow-down ${isMoreDropdownOpen ? 'active' : ''}`}></i>
+                </button>
+                
+                {isMoreDropdownOpen && (
+                  <div className="navbar-dropdown">
+                    <ul className="navbar-dropdown-list">
+                      {moreLinks.map((link) => (
+                        <li key={link.path} className="navbar-dropdown-item">
+                          <NavLink 
+                            to={link.path} 
+                            className="navbar-dropdown-link"
+                            onClick={() => {
+                              closeMobileMenu();
+                              setIsMoreDropdownOpen(false);
+                            }}
+                          >
+                            {link.label}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </li>
             </ul>
           </div>
 
@@ -108,6 +162,23 @@ const Navbar = ({ className = "" }) => {
           <div className="mobile-menu-content">
             <ul className="mobile-menu-list">
               {navLinks.map((link) => (
+                <li key={link.path} className="mobile-menu-item">
+                  <NavLink 
+                    to={link.path} 
+                    className="mobile-menu-link"
+                    onClick={closeMobileMenu}
+                  >
+                    {link.label}
+                  </NavLink>
+                </li>
+              ))}
+              
+              {/* Additional Links Section */}
+              <li className="mobile-menu-item mobile-menu-section-title">
+                <span>More Information</span>
+              </li>
+              
+              {moreLinks.map((link) => (
                 <li key={link.path} className="mobile-menu-item">
                   <NavLink 
                     to={link.path} 

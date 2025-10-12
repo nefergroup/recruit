@@ -67,11 +67,11 @@ function Footer() {
               <div className="footer-cl-2">
                 <h6 className="ft-title">Quick Links</h6>
                 <ul className="navigation-menu-footer">
-                  <li><Link to="find-jobs-list.html">Job Packages</Link></li>
-                  <li><Link to="find-jobs-list.html">Post New Job</Link></li>
-                  <li><Link to="find-jobs-list.html">Jobs Listing</Link></li>
-                  <li><Link to="employers-list.html">Employer Listing</Link></li>
-                  <li><Link to="employers-grid-fullwidth.html">Employers Grid</Link></li>
+                  <li><Link to="/recruitmentprocess">Process</Link></li>
+                  <li><Link to="/whychooserecruitplus">Why Choose Us</Link></li>
+                  <li><Link to="/successstories">Success Stories</Link></li>
+                  <li><Link to="/internationalrecruitmentservices">International</Link></li>
+                  <li><Link to="/ourrecruitmentprocess">Our Process</Link></li>
                 </ul>
               </div>
             </div>

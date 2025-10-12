@@ -155,7 +155,11 @@ function Specialization(props) {
             <div className="col-lg-7 col-md-12">
               <div className="wd-review-job thumb2 widget-counter stc">
                 <div className="thumb">
-                  <img src={require("../assets/images/review/thumb2.png")} alt="images" />
+                  <img 
+                    src="/images/recruit/IMG-20251011-WA0034.jpg" 
+                    alt="images" 
+                    style={{ maxWidth: '100%', maxHeight: '400px', width: 'auto', height: 'auto', objectFit: 'cover' }}
+                  />
                 </div>
                 <div className="trader-box">
                   <div className="content">
@@ -311,7 +315,11 @@ function Specialization(props) {
             <div className="col-lg-6 col-md-12">
               <div className="wd-review-job thumb1 widget-counter">
                 <div className="thumb">
-                  <img src={require("../assets/images/review/thumb-review.png")} alt="images" />
+                  <img 
+                    src={require("../assets/images/review/thumb-review.png")} 
+                    alt="images" 
+                    style={{ maxWidth: '100%', maxHeight: '300px', width: 'auto', height: 'auto', objectFit: 'cover' }}
+                  />
                 </div>
                 <div className="trader-box box1 ani4">
                   <div className="icon">
