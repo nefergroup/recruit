@@ -51,7 +51,11 @@ function Review(props) {
               <div className="tes-box ani5">
                 <div className="client-box">
                   <div className="avt">
-                    <img src={client1} alt="images" />
+                    <img 
+                      src="/images/recruit/IMG-20251011-WA0026.jpg" 
+                      alt="Happy Candidate" 
+                      style={{ maxWidth: '100%', maxHeight: '80px', width: 'auto', height: 'auto', objectFit: 'cover', borderRadius: '50%' }}
+                    />
                     <div className="badge"> </div>
                   </div>
                   <div className="content">
