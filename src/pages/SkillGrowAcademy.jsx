@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
+// import Header2 from "../components/header/Header2";
+import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Breadcrumb from "../components/breadcrumb";
 import Gotop from "../components/gotop";
@@ -155,7 +156,8 @@ function SkillGrowAcademy(props) {
         </div>
       </div>
       
-      <Header2 clname="actPage5" handleMobile={handleMobile} />
+      {/* <Header2 clname="actPage5" handleMobile={handleMobile} /> */}
+      <Navbar />
       <Breadcrumb title="SkillGrow Academy" />
       
       {/* Hero Section */}
