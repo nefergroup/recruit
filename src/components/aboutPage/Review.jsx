@@ -23,9 +23,13 @@ function Review(props) {
         <div className="row">
           <div className="col-lg-7 col-md-12">
             <div className="wd-review-job thumb2 widget-counter stc">
-              <div className="thumb">
-                <img src={img1} alt="images" />
-              </div>
+                <div className="thumb">
+                  <img 
+                    src="images/recruit/IMG-20251011-WA0033.jpg" 
+                    alt="Recruit Plus Team" 
+                    style={{ maxWidth: '100%', maxHeight: '400px', width: 'auto', height: 'auto', objectFit: 'cover' }}
+                  />
+                </div>
               <div className="trader-box">
                 <div className="content">
                   <h3 className="number wrap-counter">
@@ -54,7 +58,6 @@ function Review(props) {
                     <img 
                       src="/images/recruit/IMG-20251011-WA0026.jpg" 
                       alt="Happy Candidate" 
-                      style={{ maxWidth: '100%', maxHeight: '80px', width: 'auto', height: 'auto', objectFit: 'cover', borderRadius: '50%' }}
                     />
                     <div className="badge"> </div>
                   </div>
